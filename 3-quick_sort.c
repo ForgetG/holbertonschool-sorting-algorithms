@@ -17,9 +17,9 @@ void	swap(int *a, int *b)
 
 /**
  * lomuto_partition - Partitions the array using Lomuto partition scheme.
- * @array: Gien array to be partitioned.
+ * @array: Given array to be partitioned.
  * @low: Starting index of the partition.
- * @high: Ending inde of the partition.
+ * @high: Ending index of the partition.
  * @size: Size of the array.
  *
  * Return: Index of the pivot.
@@ -43,7 +43,7 @@ int	lomuto_partition(int *array, int low, int high, size_t size)
 			}
 		}
 	}
-	if (partition_index + 1 != high)
+	if (array[partition_index + 1] > pivot)
 	{
 		swap(&array[partition_index + 1], &array[high]);
 		print_array(array, size);
